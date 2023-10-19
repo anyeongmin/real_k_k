@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let id = document.querySelector("input[name='id']");
+            let pwd = document.querySelector("input[name='pwd']");
+            let btn = document.querySelector(".submit");
+            let form = document.querySelector("#regi");
+            btn.addEventListener("click",function(){
+                if (id.value.length < 5){
+                    alert("please input five letter");
+                    return;
+                }
+                if (pwd.value.length < 8){
+                    alert("비밀번호를 8글자 이상으로 입력해주세요");
+                    return;
+                }
+                form.submit();
+            });
+        }
+    </script>
+</head>
+<body>
+    <form id="regi" action="register_result" method=""post>
+        {% csrf_token %}
+        <input type = "text" name="id" placeholder="아이디"/>
+        <input type = "password" name="pwd" placeholder="비밀번호"/>
+        <!-- <input type = "email" name="email" placeholder="이메일"/> -->
+    </form>
+    <button class="submit">회원가입</button>
+</body>
+</html>
