@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['southparker.pythonanywhere.com','127.0.0.1']
 
 INSTALLED_APPS = [
     'mysite',
+    "myapp.apps.MyappConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,33 +76,33 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',  # 데이터베이스 엔진
-#         'NAME': 'war_place',                  # 데이터베이스 이름
-#         'USER': 'root',              # 데이터베이스 사용자
-#         'PASSWORD': 'ododoc1234',             # 데이터베이스 비밀번호
-#         'HOST': 'localhost',                  # 데이터베이스 호스트 (일반적으로 'localhost' 또는 '127.0.0.1')
-#         'PORT': '3306',                       # 데이터베이스 포트
-#         'OPTIONS': {
-#             'charset': 'utf8mb4',             # 문자 인코딩 설정 (옵션)
-#         },
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 데이터베이스 엔진
-        'NAME': 'southparker$sky_place',                  # 데이터베이스 이름
-        'USER': 'southparker',              # 데이터베이스 사용자
+        'NAME': 'war_place',                  # 데이터베이스 이름
+        'USER': 'root',              # 데이터베이스 사용자
         'PASSWORD': 'ododoc1234',             # 데이터베이스 비밀번호
-        'HOST': 'southparker.mysql.pythonanywhere-services.com',                  # 데이터베이스 호스트 (일반적으로 'localhost' 또는 '127.0.0.1')
+        'HOST': 'localhost',                  # 데이터베이스 호스트 (일반적으로 'localhost' 또는 '127.0.0.1')
         'PORT': '3306',                       # 데이터베이스 포트
         'OPTIONS': {
             'charset': 'utf8mb4',             # 문자 인코딩 설정 (옵션)
         },
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',  # 데이터베이스 엔진
+#         'NAME': 'southparker$sky_place',                  # 데이터베이스 이름
+#         'USER': 'southparker',              # 데이터베이스 사용자
+#         'PASSWORD': 'ododoc1234',             # 데이터베이스 비밀번호
+#         'HOST': 'southparker.mysql.pythonanywhere-services.com',                  # 데이터베이스 호스트 (일반적으로 'localhost' 또는 '127.0.0.1')
+#         'PORT': '3306',                       # 데이터베이스 포트
+#         'OPTIONS': {
+#             'charset': 'utf8mb4',             # 문자 인코딩 설정 (옵션)
+#         },
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
